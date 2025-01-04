@@ -23,3 +23,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Lightbox
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeBtn = document.querySelector(".close-btn");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    const thumbnails = Array.from(document.querySelectorAll(".thumbnail-item img"));
+    const images = thumbnails.map((thumbnail) => ({
+        src: thumbnail.src,
+        caption: thumbnail.closest(".thumbnail-item").querySelector("p").textContent
+    }));
+
+    let currentIndex = 0;
+
+    // Open lightbox
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener("click", () => {
+            openLightbox(index);
+        });
+    });
+
+    function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = images[currentIndex].src;
+        lightboxCaption.textContent = images[currentIndex].caption;
+
+        // Adjust caption width after the image loads
+        lightboxImg.onload = () => {
+            lightboxCaption.style.width = `${lightboxImg.clientWidth}px`;
+        };
+
+        lightbox.classList.remove("hidden");
+        document.body.classList.add("lightbox-open");
+    }
+
+    function closeLightbox() {
+        lightbox.classList.add("hidden");
+        document.body.classList.remove("lightbox-open");
+    }
+
+    function changeSlide(direction) {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        openLightbox(currentIndex);
+    }
+
+    // Close lightbox on close button
+    closeBtn.addEventListener("click", closeLightbox);
+
+    // Navigate slides
+    nextBtn.addEventListener("click", () => changeSlide(1));
+    prevBtn.addEventListener("click", () => changeSlide(-1));
+
+    // Close when clicking outside the image
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+});

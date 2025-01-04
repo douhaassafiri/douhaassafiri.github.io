@@ -27,14 +27,13 @@
     <main>
         <!-- Hero Section -->
         <section id="hero">
-            <h1>Douha Assafiri</h1><br>
+            <h1>Douha Assafiri</h1>
             <p>
-                I bring code to life, blending precision and creativity to craft impactful solutions. With a strong
-                foundation
-                in software development, I specialize in building efficient, scalable systems that solve real-world
-                problems.
-                My expertise extends beyond programming, incorporating graphic design and 3D modeling to create projects
-                that are not only functional but also visually engaging.
+                Bringing ideas to life through thoughtful and reliable software solutions. With a strong foundation in
+                computer science, I build efficient, scalable systems designed to solve real-world problems. Every
+                project reflects care and curiosity, with clean code, creative problem-solving, and a drive to keep
+                improving. Explore my work to see how technical expertise and a passion for learning come together to
+                deliver meaningful results.
             </p>
             <div class="buttons">
                 <a href="projects.html" class="button">Explore My Work</a>
@@ -44,45 +43,73 @@
 
         <!-- Featured Projects Section -->
         <section id="projects">
-            <h2>Featured Projects</h2><br>
+            <h2>Featured Projects</h2>
             <div class="project-gallery">
                 <div class="project-item">
                     <h3>Space Invaders Game</h3>
                     <p>A fun arcade game built in C# with SplashKit.</p>
-                    <a href="#space-invaders" class="button">View Project</a>
+                    <a href="projects/space-invaders.html" class="button">View Project</a>
                 </div>
                 <br><br>
                 <div class="project-item">
-                    <h3>Instant Messaging App</h3>
+                    <h3>ChatApp</h3>
                     <p>A real-time messaging app built using Python and C#.</p>
-                    <a href="#messaging-app" class="button">View Project</a>
+                    <a href="#projects/chatapp.html" class="button">View Project</a>
                 </div>
                 <br><br>
                 <div class="project-item">
                     <h3>Portfolio Website</h3>
                     <p>This very website, crafted with HTML, CSS, and JavaScript.</p>
-                    <a href="#portfolio-website" class="button">View Project</a>
+                    <a href="projects/portfolio-website.html" class="button">View Project</a>
                 </div>
             </div>
         </section>
 
         <!-- Complementary Skills Section -->
         <section id="skills">
-            <h2>Beyond Coding</h2><br>
-            <p>My design and 3D modeling skills add creativity and depth to my coding projects.</p><br>
-            <div class="skills-gallery">
-                <div class="skill-item">
-                    <img src="images/poster-thumbnail.jpg" alt="Poster Design">
-                    <p>Graphic Poster Design</p>
+            <h2>Beyond the Code</h2>
+            <p>These creative projects reflect my passion for visual storytelling and design exploration, showcasing my
+                skills in graphic design and 3D modeling using tools such as Adobe Photoshop, Illustrator, and Autodesk
+                Maya. Through these platforms, I bring ideas to life beyond the realm of coding, blending artistic
+                expression with technical precision.</p>
+
+            <div class="thumbnail-gallery">
+                <div class="thumbnail-item">
+                    <img src="images/book.png" alt="Fragments of Thought Collage" onclick="openLightbox(0)">
+                    <p>Fragments of Thought Collage: <br>A visual representation of introspection, blending text,
+                        shadows, and natural elements to capture the complexity of inner dialogue.</p>
                 </div>
-                <div class="skill-item">
-                    <img src="images/3d-model-thumbnail.jpg" alt="3D Model">
-                    <p>3D Modeling</p>
+                <div class="thumbnail-item">
+                    <img src="images/perfume.png" alt="Timeless Whisper Poster" onclick="openLightbox(1)">
+                    <p>Timeless Whisper Poster: A surreal composition centered around a vintage perfume bottle,
+                        symbolizing elegance and nostalgia. Accentuated by soft textures and artistic contrasts, the
+                        scene evokes a sense of allure and mystery.</p>
+                </div>
+                <div class="thumbnail-item">
+                    <img src="images/time.png" alt="Echoes of Time Poster" onclick="openLightbox(2)">
+                    <p>Echoes of Time Poster: <br>A conceptual exploration of the passage of time, symbolized through
+                        fig leaves, currency, and an old clock overlaid on muted textures.</p>
+                </div>
+                <div class="thumbnail-item diner">
+                    <img src="images/3d-model-thumbnail.jpg" alt="Retro Diner 3D Scene" onclick="openLightbox(3)">
+                    <p>Retro Diner 3D Scene: <br>A 3D modeled retro diner, complete with checkerboard floors, neon
+                        accents, and vintage décor, designed to capture a nostalgic yet vibrant aesthetic.</p>
                 </div>
             </div>
         </section>
     </main>
-    
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="hidden">
+        <span class="close-btn">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <p id="lightbox-caption"></p>
+            <button class="prev">&larr; Prev</button>
+            <button class="next">Next &rarr;</button>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2025 Douha. All rights reserved.</p>
     </footer>

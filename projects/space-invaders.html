@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders Project - Douha's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Space Invaders Project</h1>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <h3>Game Overview</h3>
+            <p>This project is a reimplementation of the classic arcade game, Space Invaders. The player controls a
+                spaceship that moves and shoots projectiles to destroy waves of alien invaders. The game features
+                different enemy types, power-ups, and a boss fight.</p>
+            <h3>Development Tools</h3>
+            <p>The game is developed using C# and SplashKit, a library that supports rendering and input handling.</p>
+        </section>
+
+        <!-- Game Design Section -->
+        <section id="game-design">
+            <h2>Game Design</h2>
+            <h3>Player Mechanics</h3>
+            <ul>
+                <li>The player ship can move using the arrow keys or WASD.</li>
+                <li>Pressing the spacebar allows the player to shoot projectiles at the aliens.</li>
+                <li>Picking up power-ups enhances player abilities, such as faster firing or extra lives.</li>
+            </ul>
+
+            <h3>Enemy Types</h3>
+            <ul>
+                <li><strong>Standard Alien Ships:</strong> Move in formation and shoot projectiles at the player.</li>
+                <li><strong>AlienChaser:</strong> Enemies that pursue the player's ship.</li>
+                <li><strong>BossAlien:</strong> Stronger enemies that appear at the end of certain levels with more
+                    health and shoot more projectiles at the player.</li>
+            </ul>
+
+            <h3>Levels and Progression</h3>
+            <p>The game becomes progressively harder as the player advances through levels. The boss appears at level 5,
+                and the player has a limited number of lives. Power-ups are collected to improve the player's chances of
+                surviving the increasingly difficult waves.</p>
+        </section>
+
+        <!-- Object-Oriented Design Section -->
+        <section id="ood-principles">
+            <h2>Object-Oriented Design Principles</h2>
+            <h3>Abstraction</h3>
+            <p>The game uses abstract classes to structure common behaviours for different types of entities. The
+                <strong>Entity</strong> class serves as a base for core game objects like <em>PlayerShip</em> and
+                <em>EnemyShip</em>, providing shared properties such as position and movement capabilities.</p>
+            <p>Additionally, the <strong>Projectile</strong> abstract class outlines essential behaviours for all
+                projectiles. Specific types of projectiles, like standard bullets and alien lasers, inherit from
+                <em>Projectile</em> and implement their own unique effects.</p>
+
+            <h3>Inheritance and Polymorphism</h3>
+            <p>The <em>EnemyShip</em> class serves as the base class for enemy types like <strong>AlienChaser</strong>
+                and <strong>BossAlien</strong>. These subclasses implement unique behaviour, such as chasing the player
+                or shooting more projectiles, demonstrating polymorphism.</p>
+
+            <h3>Design Patterns</h3>
+            <ul>
+                <li><strong>Factory Pattern:</strong> The <em>EnemyFactory</em> class is used to create various enemy
+                    types depending on the level.</li>
+                <li><strong>Observer Pattern:</strong> The <em>ScoreManager</em> class observes changes in game events
+                    (like enemy destruction and power-ups earned) and updates the player's score accordingly.</li>
+            </ul>
+        </section>
+
+        <!-- Design Features Section -->
+        <section id="design-features">
+            <h2>Design Features</h2>
+            <ul>
+                <li><strong>State Management:</strong> The game employs an <em>IGameState</em> interface with specific
+                    states to manage transitions between game modes smoothly, enhancing modularity.</li>
+                <li><strong>Object-Oriented Structure:</strong> Core classes like <em>Entity</em>, <em>PlayerShip</em>,
+                    <em>EnemyShip</em>, <em>Projectile</em>, and <em>PowerUp</em> follow principles of inheritance and
+                    encapsulation, making it easy to add or modify game entities.</li>
+                <li><strong>Factory Pattern:</strong> <em>EnemyFactory</em> and <em>PowerUpFactory</em> streamline the
+                    creation of different enemy types and power-ups, making level customization more manageable.</li>
+                <li><strong>Observer Pattern:</strong> <em>ScoreManager</em> implements the observer pattern to keep
+                    track of score changes, updating the UI immediately when an enemy is defeated or a power-up is
+                    collected.</li>
+                <li><strong>User Interface (UI):</strong> <em>GameUI</em> centralizes the display of essential game
+                    information, such as score, lives, and level progress, ensuring a clean interface.</li>
+                <li><strong>Collision Detection:</strong> Custom collision handling ensures responsive interactions and
+                    meaningful gameplay outcomes.</li>
+                <li><strong>Level Progression:</strong> <em>LevelManager</em> orchestrates the advancement of levels,
+                    adding variety and challenge as the player progresses.</li>
+            </ul>
+        </section>
+
+        <!-- Thumbnail Gallery Section -->
+        <section id="design-details">
+            <h2>Thumbnail Gallery</h2>
+            <div class="thumbnail-gallery">
+                <div class="thumbnail-item" data-index="0">
+                    <img src="../images/space-invaders-main-menu.png" alt="Main Menu">
+                    <p>Main menu interface with option to start the game.</p>
+                </div>
+                <div class="thumbnail-item" data-index="1">
+                    <img src="../images/space-invaders-level-start.png" alt="Gameplay Screen (Level Start)">
+                    <p>Initial gameplay screen showing the player ship, alien formation shooting, score, lives, number
+                        of player's bullets, level, and the menu button.</p>
+                </div>
+                <div class="thumbnail-item" data-index="2">
+                    <img src="../images/space-invaders-power-up.png" alt="Power-Up Collection">
+                    <p>After collecting a blue power-up, the player ship now shoots three bullets simultaneously,
+                        enhancing its firepower. Power-up types are visually indicated by color: blue for increased
+                        bullets and green for extra lives.</p>
+                </div>
+                <div class="thumbnail-item" data-index="3">
+                    <img src="../images/space-invaders-paused.png" alt="Paused State Screen">
+                    <p>Game paused screen displaying options to resume, restart or exit, with game details frozen.</p>
+                </div>
+                <div class="thumbnail-item" data-index="4">
+                    <img src="../images/space-invaders-game-restart.png" alt="Game Restart">
+                    <p>The player has restarted the game. The green star power-up is visible on the left, ready to be
+                        collected. This power-up restores one of the player's lives when collected, while the player
+                        navigates through a new wave of enemies.</p>
+                </div>
+                <div class="thumbnail-item" data-index="5">
+                    <img src="../images/space-invaders-alien-chaser.png" alt="AlienChaser Enemy Encounter">
+                    <p>Gameplay showing the AlienChaser enemy tracking the player's ship, illustrating enemy behaviour.
+                    </p>
+                </div>
+                <div class="thumbnail-item" data-index="6">
+                    <img src="../images/space-invaders-boss-fight.png" alt="Boss Fight (Level 5)">
+                    <p>During the boss fight, the BossAlien shoots multiple projectiles at once and has significantly
+                        more health than regular enemies, requiring the player to employ strategic movement and precise
+                        shooting.</p>
+                </div>
+                <div class="thumbnail-item" data-index="7">
+                    <img src="../images/space-invaders-victory.png" alt="Victory Screen">
+                    <p>Victory screen celebrating the player's success after defeating the boss and completing the final
+                        level. The player's final score is displayed, along with options to either restart the game or
+                        exit to the main menu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="hidden">
+            <span class="close-btn">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+                <button class="prev">&larr; Prev</button>
+                <button class="next">Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>This project demonstrates object-oriented design principles like abstraction, inheritance, and
+                polymorphism. The use of design patterns such as the Factory and Observer patterns allows for
+                scalability and modularity in the game's structure.</p>
+            <p>Future improvements could include adding new enemy types and power-ups or introducing multiplayer
+                functionality.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Douha Assafiri. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+
+</html>

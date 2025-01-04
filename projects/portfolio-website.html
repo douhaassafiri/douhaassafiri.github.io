@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Project - Douha's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio Website Project</h1>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <h3>Project Overview</h3>
+            <p>This is my personal portfolio website, designed to showcase my coding projects, skills, and creative work
+                in an elegant and accessible way. The website was built from scratch using HTML, CSS, and JavaScript,
+                with a responsive layout to provide an optimal user experience across devices.</p>
+            <h3>Purpose and Goal</h3>
+            <p>The main goal of this website is to create an engaging and organized online presence where potential
+                employers, collaborators, and peers can learn more about me and explore my projects in detail.</p>
+        </section>
+
+        <!-- Website Features Section -->
+        <section id="website-features">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Responsive Design:</strong> The layout adjusts seamlessly across desktops, tablets, and
+                    smartphones.</li>
+                <li><strong>Interactive Elements:</strong> Includes project galleries with clickable thumbnails,
+                    lightbox pop-ups, and toggleable file views.</li>
+                <li><strong>Code Syntax Highlighting:</strong> Uses Highlight.js to present code snippets in a clean and
+                    readable format.</li>
+                <li><strong>Modular Structure:</strong> The website is organized with reusable CSS classes and
+                    responsive components.</li>
+                <li><strong>Accessible Navigation:</strong> Hamburger menu for smaller screens and keyboard-accessible
+                    elements for improved usability.</li>
+            </ul>
+        </section>
+
+        <!-- Development Tools Section -->
+        <section id="development-tools">
+            <h2>Development Tools</h2>
+            <ul>
+                <li><strong>Languages:</strong> HTML5, CSS3, JavaScript (for interactivity).</li>
+                <li><strong>Frameworks and Libraries:</strong> Highlight.js (for code formatting), Google Fonts (for
+                    typography).</li>
+                <li><strong>Version Control:</strong> GitHub for source control and project tracking.</li>
+            </ul>
+        </section>
+
+        <!-- Design Details Section -->
+        <section id="design-details">
+            <h2>Design Elements</h2>
+            <div class="thumbnail-gallery">
+                <div class="thumbnail-item" data-index="0">
+                    <img src="../images/portfolio-website-homepage.png" alt="Homepage Screenshot">
+                    <p>The homepage of the website, featuring a hero section, introduction, and quick navigation links.
+                    </p>
+                </div>
+                <div class="thumbnail-item" data-index="1">
+                    <img src="../images/portfolio-website-about.png" alt="About Page Screenshot">
+                    <p>The "About" page introduces my professional journey, values, and approach to software
+                        development. It provides a deeper understanding of who I am and my motivations, with clean,
+                        structured sections and a welcoming design.</p>
+                </div>
+                <div class="thumbnail-item" data-index="2">
+                    <img src="../images/portfolio-website-projects.png" alt="Projects Page Screenshot">
+                    <p>The "Projects" page displays an overview of all projects with options to explore details or view
+                        source files. Each project features code snippets, galleries, and explanations.</p>
+                </div>
+                <div class="thumbnail-item" data-index="3">
+                    <img src="../images/portfolio-website-contact.png" alt="Contact Section Screenshot">
+                    <p>The contact section with interactive icons for email, GitHub, and LinkedIn, designed for quick
+                        connections. It encourages visitors to reach out and explore my work further.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Lightbox for Thumbnails -->
+        <div id="lightbox" class="hidden">
+            <span class="close-btn">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+                <button class="prev">&larr; Prev</button>
+                <button class="next">Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Challenges and Solutions Section -->
+        <section id="challenges">
+            <h2>Challenges and Solutions</h2>
+            <ul>
+                <li><strong>Responsive Design:</strong> Ensuring consistency across different screen sizes required
+                    thorough testing and flexible layouts.</li>
+                <li><strong>Maintaining Simplicity:</strong> Balancing detailed content with a minimalistic design was
+                    achieved by selectively displaying information and using collapsible sections.</li>
+                <li><strong>Performance Optimization:</strong> Image compression and lazy loading were implemented to
+                    ensure fast loading speeds.</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>This portfolio website serves as a digital extension of my professional and creative identity. It
+                represents my commitment to continuous improvement, clean design, and effective communication through
+                code.</p>
+            <p>Future improvements could include adding blog posts for technical write-ups, implementing a built-in form
+                submission feature, and exploring further animation enhancements.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Douha Assafiri. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+
+</html>
