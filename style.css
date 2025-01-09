@@ -50,6 +50,30 @@ body {
     z-index: 1000;
 }
 
+.theme-toggle::after {
+    content: attr(aria-label);
+    visibility: hidden;
+    opacity: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 10px;
+    position: absolute;
+    right: calc(100% + 5px);
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 0.875rem;
+}
+
+.theme-toggle:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* General List Styling */
 section ul,
 section ol {
@@ -987,11 +1011,11 @@ body.dark-mode .close-btn {
 }
 
 .prev {
-    left: -50px;
+    right: calc(100% - 5px);
 }
 
 .next {
-    right: -50px;
+    left: calc(100% - 5px);
 }
 
 .prev:hover,
@@ -1153,10 +1177,12 @@ body.dark-mode .hamburger {
 
     .prev {
         left: 2.5%;
+        right: auto;
     }
 
     .next {
         right: 2.5%;
+        left: auto;
     }
 
     .close-btn {

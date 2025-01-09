@@ -32,6 +32,7 @@ const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
     toggleButton.textContent = "☀️";
+    toggleButton.setAttribute("aria-label", "Toggle Light Mode");
 }
 
 // Toggle dark mode on button click
@@ -39,6 +40,7 @@ toggleButton.addEventListener("click", () => {
     const isDarkMode = document.body.classList.toggle("dark-mode");
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     toggleButton.textContent = isDarkMode ? "☀️" : "🌙";
+    toggleButton.setAttribute("aria-label", isDarkMode ? "Toggle Light Mode" : "Toggle Dark Mode");
 });
 
 
