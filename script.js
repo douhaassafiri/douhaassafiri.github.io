@@ -9,6 +9,40 @@ document.addEventListener("DOMContentLoaded", () => {
     document.head.appendChild(canonical);
 });
 
+// Scroll fade effect
+document.addEventListener("scroll", () => {
+    const fadeElements = document.querySelectorAll(".scroll-fade");
+    fadeElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.bottom < 0 || rect.top > windowHeight) {
+            el.style.opacity = 0;
+        } else {
+            el.style.opacity = 1;
+        }
+    });
+});
+
+// Dark/Light mode toggle
+const toggleButton = document.getElementById("theme-toggle");
+
+// Check localStorage for saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️";
+}
+
+// Toggle dark mode on button click
+toggleButton.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    toggleButton.textContent = isDarkMode ? "☀️" : "🌙";
+});
+
+
+
 // Select the hamburger button and navigation menu
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');

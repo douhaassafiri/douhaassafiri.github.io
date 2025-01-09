@@ -14,6 +14,7 @@
         <h1>ChatApp Project</h1>
         <button class="hamburger" aria-label="Toggle menu">☰</button>
         <nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
             <a href="../index.html">Home</a>
             <a href="../about.html">About</a>
             <a href="../projects.html">Projects</a>
@@ -23,7 +24,7 @@
 
     <main>
         <!-- Introduction Section -->
-        <section id="introduction">
+        <section id="introduction" class="scroll-fade">
             <h2>Introduction</h2>
             <h3>Project Overview</h3>
             <p>ChatApp is a messaging application designed to provide a smooth user experience for chatting over the
@@ -32,7 +33,7 @@
         </section>
 
         <!-- Key Features Section -->
-        <section id="features">
+        <section id="features" class="scroll-fade">
             <h2>Key Features</h2>
             <ul>
                 <li><strong>Local Message Storage:</strong> Messages are saved locally using SQLite for offline access.
@@ -46,7 +47,7 @@
         </section>
 
         <!-- Progress Screenshots Section -->
-        <section id="design-details">
+        <section id="design-details" class="scroll-fade">
             <h2>Design and Progress</h2>
             <div class="thumbnail-gallery">
                 <div class="thumbnail-item" data-index="0">
@@ -71,7 +72,7 @@
         </div>
 
         <!-- Challenges and Solutions Section -->
-        <section id="challenges">
+        <section id="challenges" class="scroll-fade">
             <h2>Challenges and Solutions</h2>
             <ul>
                 <li><strong>Message Sync Issues:</strong> Implementing two-way sync for message deletion required
@@ -84,7 +85,7 @@
         </section>
 
         <!-- Conclusion Section -->
-        <section id="conclusion">
+        <section id="conclusion" class="scroll-fade">
             <h2>Conclusion</h2>
             <p>The ChatApp demonstrates my skills in building multi-layered software with backend APIs and front-end
                 interfaces. Future improvements include adding authentication, chat history, and real-time updates.</p>

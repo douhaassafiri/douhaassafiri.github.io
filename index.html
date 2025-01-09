@@ -17,8 +17,10 @@
         <h1>Douha's Portfolio</h1>
         <button class="hamburger" aria-label="Toggle menu">☰</button>
         <nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
+            <a href="cv.html">CV</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -26,23 +28,28 @@
 
     <main>
         <!-- Hero Section -->
+        <div class="floating-shape shape-left"></div>
+        <div class="floating-shape shape-middle"></div>
+        <div class="floating-shape shape-right"></div>
         <section id="hero">
-            <h1>Douha Assafiri</h1>
-            <p>
-                Bringing ideas to life through thoughtful and reliable software solutions. With a strong foundation in
-                computer science, I build efficient, scalable systems designed to solve real-world problems. Every
-                project reflects care and curiosity, with clean code, creative problem-solving, and a drive to keep
-                improving. Explore my work to see how technical expertise and a passion for learning come together to
-                deliver meaningful results.
-            </p>
-            <div class="buttons">
-                <a href="projects.html" class="button">Explore My Work</a>
-                <a href="contact.html" class="button">Get in Touch</a>
+            <div class="hero-content">
+                <h1>Douha Assafiri</h1>
+                <p>
+                    Bringing ideas to life through thoughtful and reliable software solutions. With a strong foundation in
+                    computer science, I build efficient, scalable systems designed to solve real-world problems. Every
+                    project reflects care and curiosity, with clean code, creative problem-solving, and a drive to keep
+                    improving. Explore my work to see how technical expertise and a passion for learning come together to
+                    deliver meaningful results.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="button">Explore My Work</a>
+                    <a href="contact.html" class="button">Get in Touch</a>
+                </div>
             </div>
         </section>
 
         <!-- Featured Projects Section -->
-        <section id="projects">
+        <section id="projects"  class="scroll-fade">
             <h2>Featured Projects</h2>
             <div class="project-gallery">
                 <div class="project-item">
@@ -66,7 +73,7 @@
         </section>
 
         <!-- Complementary Skills Section -->
-        <section id="skills">
+        <section id="skills"  class="scroll-fade">
             <h2>Beyond the Code</h2>
             <p>These creative projects reflect my passion for visual storytelling and design exploration, showcasing my
                 skills in graphic design and 3D modeling using tools such as Adobe Photoshop, Illustrator, and Autodesk
@@ -76,23 +83,23 @@
             <div class="thumbnail-gallery">
                 <div class="thumbnail-item">
                     <img src="images/book.png" alt="Fragments of Thought Collage" onclick="openLightbox(0)">
-                    <p>Fragments of Thought Collage: <br>A visual representation of introspection, blending text,
+                    <p><strong>Fragments of Thought Collage:</strong> <br>A visual representation of introspection, blending text,
                         shadows, and natural elements to capture the complexity of inner dialogue.</p>
                 </div>
                 <div class="thumbnail-item">
                     <img src="images/perfume.png" alt="Timeless Whisper Poster" onclick="openLightbox(1)">
-                    <p>Timeless Whisper Poster: A surreal composition centered around a vintage perfume bottle,
+                    <p><strong>Whisper Poster:</strong> A surreal composition centered around a vintage perfume bottle,
                         symbolizing elegance and nostalgia. Accentuated by soft textures and artistic contrasts, the
                         scene evokes a sense of allure and mystery.</p>
                 </div>
                 <div class="thumbnail-item">
                     <img src="images/time.png" alt="Echoes of Time Poster" onclick="openLightbox(2)">
-                    <p>Echoes of Time Poster: <br>A conceptual exploration of the passage of time, symbolized through
+                    <p><strong>Echoes of Time Poster:</strong> <br>A conceptual exploration of the passage of time, symbolized through
                         fig leaves, currency, and an old clock overlaid on muted textures.</p>
                 </div>
                 <div class="thumbnail-item diner">
                     <img src="images/3d-model-thumbnail.jpg" alt="Retro Diner 3D Scene" onclick="openLightbox(3)">
-                    <p>Retro Diner 3D Scene: <br>A 3D modeled retro diner, complete with checkerboard floors, neon
+                    <p><strong>Retro Diner 3D Scene:</strong> <br>A 3D modeled retro diner, complete with checkerboard floors, neon
                         accents, and vintage décor, designed to capture a nostalgic yet vibrant aesthetic.</p>
                 </div>
             </div>

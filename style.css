@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* HTML and Body */
 html, body {
     height: 100%;
@@ -20,6 +25,23 @@ body {
     background: #f8f9fa;
     color: #333;
     line-height: 1.6;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 /* General List Styling */
@@ -60,6 +82,69 @@ h3 {
     text-transform: capitalize;
 }
 
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p {
+    color: #eee;
+}
+
+body.dark-mode section {
+    background-color: #333;
+    color: #ddd;
+}
+
+.scroll-fade {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-fade.hide {
+    transform: translateY(20px);
+}
+
+
+.scroll-fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.floating-shape {
+    width: 40px;
+    height: 40px;
+    background-color: #7dafff;
+    border-radius: 50%;
+    position: absolute;
+    animation: float 6s infinite ease-in-out;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.shape-left {
+    top: 10%;
+    left: 5%;
+    background-color: #94c8ff;
+}
+
+.shape-middle {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7dafff;
+}
+
+.shape-right {
+    top: 20%;
+    right: 5%;
+    background-color: #94c8ff;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
 
 
 /***************************************************/
@@ -72,6 +157,12 @@ header {
     text-align: center;
     border-bottom: 2px solid #7dafff;
     position: relative;
+}
+
+body.dark-mode header {
+    background: #333;
+    color: #eee;
+    border-bottom: 2px solid #555;
 }
 
 nav {
@@ -109,6 +200,13 @@ nav a:hover::after {
     width: 100%;
 }
 
+body.dark-mode nav a {
+    color: #eee;
+}
+
+body.dark-mode nav a::after {
+    background: linear-gradient(90deg, #444, #666);
+}
 
 
 /* Main Content */
@@ -135,7 +233,7 @@ section {
 a.button {
     display: inline-block;
     padding: 10px 18px;
-    background: linear-gradient(90deg, #7dafff, #94c8ff);
+    background: #7dafff;
     color: #ffffff;
     text-decoration: none;
     border-radius: 25px;
@@ -146,8 +244,19 @@ a.button {
 }
 
 a.button:hover {
+    background: linear-gradient(90deg, #94c8ff, #7dafff);
     background-position: 100% 50%;
     transform: translateY(-3px);
+}
+
+body.dark-mode a.button {
+    background: #444;
+    color: #7dafff;
+}
+
+body.dark-mode a.button:hover {
+    background: #888;
+    color: #ffffff;
 }
 
 
@@ -164,6 +273,42 @@ a.button:hover {
     background: linear-gradient(135deg, #f3f4f7, #d6d4ff);
     color: #333;
     border-bottom: 5px solid #7dafff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark-mode #hero {
+    background: linear-gradient(135deg, #2b2b2b, #3e3e3e);
+    border-bottom: 5px solid #555;
+}
+
+.hero-content {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-buttons a {
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-3px);
 }
 
 #hero h1 {
@@ -174,6 +319,10 @@ a.button:hover {
     text-transform: capitalize;
 }
 
+body.dark-mode #hero h1 {
+    color: #eee;
+}
+
 #hero p {
     font-size: 1.2rem;
     max-width: 700px;
@@ -182,25 +331,8 @@ a.button:hover {
     color: #444;
 }
 
-#hero .buttons {
-    margin-top: 20px;
-}
-
-#hero .button {
-    margin: 10px;
-    padding: 15px 25px;
-    font-size: 1rem;
-    background: #7dafff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#hero .button:hover {
-    background: #005f99;
-    transform: translateY(-3px);
+body.dark-mode #hero p {
+    color: #ccc;
 }
 
 /* Projects Section */
@@ -209,6 +341,11 @@ a.button:hover {
     text-align: center;
     padding: 40px;
     background: #f8f9fa;
+}
+
+body.dark-mode #coding {
+    background: #2c2c2c;
+    color: #ddd;
 }
 
 .project-gallery {
@@ -223,7 +360,12 @@ a.button:hover {
 #skills {
     text-align: center;
     padding: 40px;
-    background: #ffffff;
+    background-color: #ffffff;
+}
+
+body.dark-mode #skills {
+    background-color: #1f1f1f;
+    color: #ddd;
 }
 
 #skills .skills-list {
@@ -244,6 +386,10 @@ a.button:hover {
     color: #555;
 }
 
+body.dark-mode #skills .skills-list li {
+    color: #ccc;
+}
+
 
 
 /***************************************************/
@@ -257,7 +403,10 @@ a.button:hover {
     padding: 40px 20px;
     text-align: center;
     border-radius: 10px;
-    margin: 40px 20px;
+}
+
+body.dark-mode #cta {
+    background: linear-gradient(135deg, #2b2b2b, #3e3e3e);
 }
 
 #cta p {
@@ -273,8 +422,6 @@ a.button:hover {
     margin: 10px;
     padding: 15px 25px;
     font-size: 1rem;
-    background: #7dafff;
-    color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
@@ -282,8 +429,142 @@ a.button:hover {
 }
 
 #cta .button:hover {
-    background: #005f99;
     transform: translateY(-3px);
+}
+
+
+
+/***************************************************/
+/* CV Page */
+/***************************************************/
+.cv-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    background-color: #f7f7f7;
+}
+
+body.dark-mode .cv-container {
+    background-color: #2c2c2c;
+    color: #ddd;
+}
+
+.cv-left-column,
+.cv-right-column {
+    flex: 1 1 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .cv-left-column, body.dark-mode .cv-right-column {
+    background-color: #333;
+    color: #ddd;
+}
+
+.cv-left-column {
+    text-align: left;
+}
+
+.cv-right-column {
+    text-align: left;
+}
+
+.cv-header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #005f99;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .cv-header {
+    color: #ccc;
+}
+
+.cv-section-title {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.cv-profile-summary {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.cv-list {
+    padding-left: 20px;
+}
+
+.cv-list li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.cv-contact-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.cv-contact-list li {
+    margin-bottom: 10px;
+}
+
+.cv-contact-list li span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.cv-contact-list a {
+    color: #005f99;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+body.dark-mode .cv-contact-list a {
+    color: #7dafff;
+}
+
+.cv-contact-list a:hover {
+    color: #003f73;
+    text-decoration: underline;
+}
+
+body.dark-mode .cv-contact-list a:hover {
+    color: #94c8ff;
+}
+
+.download-button {
+    background: linear-gradient(90deg, #7dafff, #94c8ff);
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center ;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.download-button:hover {
+    background: linear-gradient(90deg, #94c8ff, #7dafff);
+    transform: translateY(-3px);
+}
+
+body.dark-mode .download-button {
+    background: #444;
+    color: #7dafff;
+}
+
+body.dark-mode .download-button:hover {
+    background: #888;
+    color: #ffffff;
 }
 
 
@@ -295,7 +576,18 @@ a.button:hover {
 #projects {
     padding: 40px 20px;
     text-align: center;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
 }
+
+body.dark-mode #projects {
+    background-color: #2c2c2c;
+}
+
+body.dark-mode #projects {
+    background-color: #2c2c2c;
+}
+
 
 .project-list {
     display: flex;
@@ -312,6 +604,11 @@ a.button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .project-item {
+    background: #333;
+    color: #ddd;
 }
 
 .project-item:hover {
@@ -339,15 +636,12 @@ a.button:hover {
 .project-item .button {
     margin: 10px;
     padding: 10px 20px;
-    background: #7dafff;
-    color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .project-item .button:hover {
-    background: #005f99;
     transform: translateY(-3px);
 }
 
@@ -356,7 +650,7 @@ a.button:hover {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px;
-    background: #7dafff;
+    background: linear-gradient(90deg, #7dafff, #94c8ff);
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -370,12 +664,21 @@ a.button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+body.dark-mode .toggle-files {
+    background: #444;
+    color: #7dafff;
+}
+
 .toggle-files:hover {
     background-position: 100% 50%;
     transform: translateY(-3px);
-    background: #005f99;
+    background: linear-gradient(90deg, #94c8ff, #7dafff);
 }
 
+body.dark-mode .toggle-files:hover {
+    background: #888;
+    color: #ffffff;
+}
 
 .file-list {
     margin-top: 20px;
@@ -386,6 +689,12 @@ a.button:hover {
     border-radius: 5px;
     overflow-x: auto;
     max-width: 100%;
+}
+
+body.dark-mode .file-list {
+    background: #333;
+    color: #ddd;
+    border: 1px solid #555;
 }
 
 .button-container {
@@ -399,10 +708,7 @@ a.button:hover {
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
-    background: #f8f9fa;
-    color: #7dafff;
     border-radius: 25px;
-    border: 2px solid #7dafff;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -410,8 +716,6 @@ a.button:hover {
 }
 
 .button-container .button:hover {
-    background: #7dafff;
-    color: #ffffff;
     transform: translateY(-3px);
 }
 
@@ -425,6 +729,11 @@ pre {
     max-width: 100%;
 }
 
+body.dark-mode pre {
+    background: #333;
+    color: #ddd;
+}
+
 .file-list pre,
 .file-list code {
     text-align: left;
@@ -436,6 +745,10 @@ pre {
     font-family: 'Courier New', monospace;
 }
 
+body.dark-mode .file-list pre, body.dark-mode .file-list code {
+    background-color: #111;
+    color: #ddd;
+}
 
 
 
@@ -458,10 +771,19 @@ pre {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+body.dark-mode .icon-button {
+    background: #ccc;
+    border: 2px solid #555;
+}
+
 .icon-button:hover {
     background: #eae8ff; 
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .icon-button:hover {
+    background: #fff;
 }
 
 .icon {
@@ -487,7 +809,7 @@ pre {
 
 
 /***************************************************/
-/* Space Invaders Game */
+/* Individual Projects */
 /***************************************************/
 
 /* Section Styling */
@@ -498,6 +820,11 @@ pre {
     margin: 40px auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #overview, body.dark-mode #design-details {
+    background: #333;
+    color: #ddd;
 }
 
 /* Thumbnail Gallery */
@@ -534,6 +861,10 @@ pre {
     color: #555;
 }
 
+body.dark-mode .thumbnail-item p {
+    color: #ccc;
+}
+
 /* Embed PDF Styling */
 iframe {
     border-radius: 10px;
@@ -568,6 +899,10 @@ iframe {
     color: white;
 }
 
+body.dark-mode .lightbox-content {
+    color: #ddd;
+}
+
 .lightbox-content img {
     max-width: 90%;
     max-height: 70vh;
@@ -594,11 +929,15 @@ iframe {
     cursor: pointer;
 }
 
+body.dark-mode .close-btn {
+    color: #ddd;
+}
+
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #7dafff;
+    background: linear-gradient(90deg, #7dafff, #94c8ff);
     border: none;
     color: white;
     padding: 10px 20px;
@@ -619,7 +958,17 @@ iframe {
 }
 
 .prev:hover, .next:hover, .close-btn:hover {
-    background: #005f99;
+    background: linear-gradient(90deg, #94c8ff, #7dafff);
+}
+
+body.dark-mode .prev, body.dark-mode .next {
+    background: #444;
+    color: #7dafff;
+}
+
+body.dark-mode .prev:hover, body.dark-mode .next:hover {
+    background: #888;
+    color: #ffffff;
 }
 
 .lightbox-buttons {
@@ -672,9 +1021,13 @@ footer p {
     cursor: pointer;
     color: #333;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 30px;
+    left: 15px;
     z-index: 1000;
+}
+
+body.dark-mode .hamburger {
+    color: #eee;
 }
 
 /***************************************************/
@@ -682,6 +1035,10 @@ footer p {
 /***************************************************/
 
 @media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
     /* Ensure nav is hidden by default */
     nav {
         display: none; /* Hide navigation menu */
@@ -689,13 +1046,18 @@ footer p {
         gap: 10px;
         background: #eae8ff;
         position: absolute;
-        top: 60px;
+        top: 111px;
         right: 0;
         width: 100%;
         padding: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-top: 2px solid #d6d4ff;
-        z-index: 1000; /* Ensure it appears above other elements */
+        z-index: 1000; 
+    }
+
+    body.dark-mode nav {
+        background: #333;
+        border-top: 2px solid #555;
     }
 
     /* Show navigation when the "show" class is toggled */
@@ -756,6 +1118,24 @@ footer p {
     .close-btn {
         font-size: 24px;
         right: 10px;
+    }
+
+    .cv-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cv-left-column,
+    .cv-right-column {
+        width: 100%;
+    }
+
+    .cv-buttons a {
+        padding: 8px 16px;
+    }
+
+    .wave {
+        display: none;
     }
 }
 

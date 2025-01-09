@@ -14,6 +14,7 @@
         <h1>Space Invaders Project</h1>
         <button class="hamburger" aria-label="Toggle menu">☰</button>
         <nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
             <a href="../index.html">Home</a>
             <a href="../about.html">About</a>
             <a href="../projects.html">Projects</a>
@@ -23,7 +24,7 @@
 
     <main>
         <!-- Introduction Section -->
-        <section id="introduction">
+        <section id="introduction" class="scroll-fade">
             <h2>Introduction</h2>
             <h3>Game Overview</h3>
             <p>This project is a reimplementation of the classic arcade game, Space Invaders. The player controls a
@@ -34,7 +35,7 @@
         </section>
 
         <!-- Game Design Section -->
-        <section id="game-design">
+        <section id="game-design" class="scroll-fade">
             <h2>Game Design</h2>
             <h3>Player Mechanics</h3>
             <ul>
@@ -58,7 +59,7 @@
         </section>
 
         <!-- Object-Oriented Design Section -->
-        <section id="ood-principles">
+        <section id="ood-principles" class="scroll-fade">
             <h2>Object-Oriented Design Principles</h2>
             <h3>Abstraction</h3>
             <p>The game uses abstract classes to structure common behaviours for different types of entities. The
@@ -83,7 +84,7 @@
         </section>
 
         <!-- Design Features Section -->
-        <section id="design-features">
+        <section id="design-features" class="scroll-fade">
             <h2>Design Features</h2>
             <ul>
                 <li><strong>State Management:</strong> The game employs an <em>IGameState</em> interface with specific
@@ -106,7 +107,7 @@
         </section>
 
         <!-- Thumbnail Gallery Section -->
-        <section id="design-details">
+        <section id="design-details" class="scroll-fade">
             <h2>Thumbnail Gallery</h2>
             <div class="thumbnail-gallery">
                 <div class="thumbnail-item" data-index="0">
@@ -166,7 +167,7 @@
         </div>
 
         <!-- Conclusion Section -->
-        <section id="conclusion">
+        <section id="conclusion" class="scroll-fade">
             <h2>Conclusion</h2>
             <p>This project demonstrates object-oriented design principles like abstraction, inheritance, and
                 polymorphism. The use of design patterns such as the Factory and Observer patterns allows for
