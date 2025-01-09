@@ -560,6 +560,10 @@ iframe {
 
 .lightbox-content {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     color: white;
 }
@@ -574,6 +578,8 @@ iframe {
 .lightbox-content p {
     max-width: 90%;
     width: auto;
+    max-height: 100px;
+    overflow-y: auto;
     margin: 0 auto;
     font-size: 1.1rem;
     padding-top: 10px;
@@ -589,18 +595,41 @@ iframe {
 }
 
 .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: #7dafff;
     border: none;
     color: white;
     padding: 10px 20px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
-    margin: 10px;
+    z-index: 1;
+    width: auto;
+    height: auto;
+}
+
+.prev {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
 }
 
 .prev:hover, .next:hover, .close-btn:hover {
     background: #005f99;
+}
+
+.lightbox-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
 }
 
 body.lightbox-open {
@@ -701,18 +730,27 @@ footer p {
     }
 
     .lightbox-content img {
-        max-width: 95%;
+        max-width: 70%;
         max-height: 50vh;
     }
 
     .lightbox-content p {
+        max-width: 70%;
         font-size: 1rem;
         padding-top: 5px;
     }
 
     .prev, .next {
-        padding: 8px 16px;
+        padding: 10px 10px;
         font-size: 1rem;
+    }
+
+    .prev {
+        left: 2.5%;
+    }
+
+    .next {
+        right: 2.5%;
     }
 
     .close-btn {

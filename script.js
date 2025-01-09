@@ -1,3 +1,14 @@
+// Add dynamic canonical tag
+document.addEventListener("DOMContentLoaded", () => {
+    const canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+
+    // If it's /index.html, change it to /
+    const path = window.location.pathname === "/index.html" ? "/" : window.location.pathname;
+    canonical.setAttribute("href", `${window.location.origin}${path}`);
+    document.head.appendChild(canonical);
+});
+
 // Select the hamburger button and navigation menu
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
