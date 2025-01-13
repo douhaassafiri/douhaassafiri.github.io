@@ -31,20 +31,31 @@
             <h3>Project Overview</h3>
             <p>ChatApp is a messaging application designed to provide a smooth user experience for chatting over the
                 internet.</p>
-            <p>It uses Python FastAPI for the backend and C# WPF for the client-side interface.</p>
+            <p>It uses Python FastAPI for the backend and C# WPF for the client-side interface. ChatApp allows users to
+                send messages, delete messages, and retrieve their chat history. Additionally, the app includes a
+                whimsical offline unicorn game that is activated when the server is unavailable.</p>
         </section>
 
         <!-- Key Features Section -->
         <section id="features" class="scroll-fade">
             <h2>Key Features</h2>
             <ul>
-                <li><strong>Local Message Storage:</strong> Messages are saved locally using SQLite for offline access.
-                </li>
-                <li><strong>Message Deletion Sync:</strong> Users can delete messages locally, with planned sync to the
+                <li><strong>User Authentication:</strong> Users can create an account, log in, and securely access their
+                    chat history.</li>
+                <li><strong>Chat History:</strong> ChatApp stores and fetches previous messages between users,
+                    displaying them in chronological order.</li>
+                <li><strong>Real-Time Messaging:</strong> Send and receive messages instantly when connected to the
                     server.</li>
-                <li><strong>Server Responses:</strong> The server can send automated replies for a more interactive
-                    experience.</li>
-                <li><strong>Planned Features:</strong> Real-time messaging, user authentication, and encryption.</li>
+                <li><strong>Offline Support:</strong> Messages are stored locally when the app is offline, and they sync
+                    with the server once the connection is restored.</li>
+                <li><strong>Message Deletion Sync:</strong> Delete messages locally, and they will be synchronized with
+                    the server once online.</li>
+                <li><strong>Offline Unicorn Game:</strong> A whimsical offline unicorn game is activated if the server
+                    is disconnected, ensuring users stay entertained.</li>
+                <li><strong>Whimsical UI:</strong> The user interface is designed with a playful, pastel color palette
+                    for a friendly and engaging user experience.</li>
+                <li><strong>Server Responses:</strong> The server can provide automated responses to simulate
+                    interaction, making the experience more engaging.</li>
             </ul>
         </section>
 
@@ -53,15 +64,36 @@
             <h2>Design and Progress</h2>
             <div class="thumbnail-gallery">
                 <div class="thumbnail-item" data-index="0">
-                    <img src="../images/chatapp-ui.png" alt="ChatApp UI Screenshot">
-                    <p>The WPF client UI showing the message box, send button, and server connection status.</p>
+                    <img src="../images/chatapp-login.png" alt="ChatApp Login Screen">
+                    <p>The login screen where users enter their credentials to access the app.</p>
                 </div>
                 <div class="thumbnail-item" data-index="1">
-                    <img src="../images/chatapp-server.png" alt="ChatApp Server Screenshot">
-                    <p>The backend FastAPI server running and logging incoming messages and responses.</p>
+                    <img src="../images/chatapp-register.png" alt="ChatApp Register Screen">
+                    <p>The create account window for new users to register by entering a username and password.</p>
+                </div>
+                <div class="thumbnail-item" data-index="2">
+                    <img src="../images/chatapp-addfriend.png" alt="ChatApp Add Friend Screen">
+                    <p>Allows users to add friends by searching for other users and sending friend requests.</p>
+                </div>
+                <div class="thumbnail-item" data-index="3">
+                    <img src="../images/chatapp-friend-list.png" alt="ChatApp Friend List">
+                    <p>Shows the user's friend list, where they can start chats and view pending requests.</p>
+                </div>
+                <div class="thumbnail-item" data-index="4">
+                    <img src="../images/chatapp-friend-request.png" alt="ChatApp Friend Requests">
+                    <p>Displays pending friend requests with options to approve or reject them.</p>
+                </div>
+                <div class="thumbnail-item" data-index="5">
+                    <img src="../images/chatapp-messages.png" alt="ChatApp Messages">
+                    <p>Displays the chat interface where users exchange messages in real-time.</p>
+                </div>
+                <div class="thumbnail-item" data-index="6">
+                    <img src="../images/chatapp-offline.gif" alt="Offline Unicorn Game" class="unicorn-game">
+                    <p>The offline unicorn game when the app is disconnected from the server.</p>
                 </div>
             </div>
         </section>
+        
         <!-- Lightbox -->
         <div id="lightbox" class="hidden">
             <span class="close-btn">&times;</span>
@@ -81,17 +113,25 @@
                     careful handling of client-server communication.</li>
                 <li><strong>UI Freezing:</strong> Learned how to use asynchronous calls to avoid UI freezing during
                     background tasks.</li>
-                <li><strong>Future Focus:</strong> Implementing proper socket communication for real-time message
-                    updates.</li>
+                <li><strong>Offline Messaging:</strong> Implemented offline message queueing to ensure that messages are
+                    synced once the app reconnects to the server.</li>
+                <li><strong>Unicorn Game Development:</strong> Created a fun offline unicorn game to engage users during
+                    server downtimes.</li>
+                <li><strong>Chat History:</strong> Ensured the history of messages between users is maintained and
+                    displayed properly.</li>
             </ul>
         </section>
 
         <!-- Conclusion Section -->
         <section id="conclusion" class="scroll-fade">
             <h2>Conclusion</h2>
-            <p>The ChatApp demonstrates my skills in building multi-layered software with backend APIs and front-end
-                interfaces. Future improvements include adding authentication, chat history, and real-time updates.</p>
+            <p>ChatApp showcases my ability to build a fully functional messaging application with both backend APIs and
+                a user-friendly front-end. The app supports real-time messaging, and includes features like friend
+                lists, message deletion, and an offline unicorn game. Future improvements will focus on adding user
+                authentication, real-time messaging updates, and further refining the offline experience to enhance
+                overall usability and functionality.</p>
         </section>
+
     </main>
 
     <footer>
