@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Douha Assafiri – Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="main-header">
+    <div class="nav-wrapper">
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu" class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#tech-stack">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section id="hero">
+        <div class="canvas-wrapper">
+            <canvas class="connecting-dots"></canvas>
+            <div class="cursor-glow"></div>
+        </div>
+
+        <h1>Douha Assafiri</h1>
+        <p>Software developer with a focus on web, mobile, desktop, and game development.</p>
+        <div class="hero-buttons">
+            <a href="assets/documents/Douha_Assafiri_CV.pdf" class="button" download>Download CV</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <img src="assets/icons/about-icon.png" alt="About Icon" class="about-icon"/>
+        <h2>About Me</h2>
+        <p>I am drawn to coding for its mix of logic, creativity, and problem-solving. I enjoy breaking down complex
+            ideas into clear, workable solutions, particularly when building something useful with others. I focus on
+            writing code that's maintainable, readable, and designed with long-term usability in mind.</p>
+    </section>
+
+    <section id="tech-stack">
+        <h2>Tech Stack</h2>
+        <div class="tech-icons">
+            <img src="assets/icons/c-original.svg" alt="C" title="C" class="tech-icon"/>
+            <img src="assets/icons/cplusplus-original.svg" alt="C++" title="C++" class="tech-icon"/>
+            <img src="assets/icons/csharp-original.svg" alt="C#" title="C#" class="tech-icon"/>
+            <img src="assets/icons/python-original.svg" alt="Python" title="Python" class="tech-icon"/>
+            <img src="assets/icons/ruby-original.svg" alt="Ruby" title="Ruby" class="tech-icon"/>
+            <img src="assets/icons/html5-original.svg" alt="HTML" title="HTML" class="tech-icon"/>
+            <img src="assets/icons/javascript-original.svg" alt="JavaScript" title="JavaScript" class="tech-icon"/>
+            <img src="assets/icons/typescript-original.svg" alt="TypeScript" title="TypeScript" class="tech-icon"/>
+            <img src="assets/icons/php-original.svg" alt="PHP" title="PHP" class="tech-icon"/>
+            <img src="assets/icons/mysql-original.svg" alt="SQL" title="SQL" class="tech-icon"/>
+            <img src="assets/icons/css3-original.svg" alt="CSS" title="CSS" class="tech-icon"/>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <div class="project-header">
+                <h3>Taskie</h3>
+                <a href="https://github.com/douhaassafiri/taskie" target="_blank" class="gh-icon-button"
+                   aria-label="View on GitHub">
+                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
+                </a>
+            </div>
+            <p class="project-description">
+                A simple app for managing to-do lists.
+            </p>
+            <ul class="project-tags">
+                <li>Python</li>
+                <li>PySide6</li>
+                <li>QSS</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h3>ChatApp</h3>
+                <a href="https://github.com/douhaassafiri/ChatApp" target="_blank" class="gh-icon-button"
+                   aria-label="View on GitHub">
+                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
+                </a>
+            </div>
+            <p class="project-description">
+                A basic messaging app with an offline mini-game.
+            </p>
+            <ul class="project-tags">
+                <li>C#</li>
+                <li>WPF</li>
+                <li>FastAPI</li>
+                <li>SQLite</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h3>Space Invaders</h3>
+                <a href="https://github.com/douhaassafiri/spaceinvaders" target="_blank" class="gh-icon-button"
+                   aria-label="View on GitHub">
+                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
+                </a>
+            </div>
+            <p class="project-description">
+                A remake of the classic arcade game.
+            </p>
+            <ul class="project-tags">
+                <li>C#</li>
+                <li>SplashKit</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h3>GZDoom AI Showcase</h3>
+                <a href="https://github.com/douhaassafiri/gzdoom" target="_blank" class="gh-icon-button"
+                   aria-label="View on GitHub">
+                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
+                </a>
+            </div>
+            <p class="project-description">
+                A custom GZDoom mod that explores enemy AI behaviour.
+            </p>
+            <ul class="project-tags">
+                <li>ZScript</li>
+                <li>NPC AI</li>
+                <li>Modding</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h3>My Portfolio</h3>
+                <a href="https://github.com/douhaassafiri/portfolio" target="_blank" class="gh-icon-button"
+                   aria-label="View on GitHub">
+                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
+                </a>
+            </div>
+            <p class="project-description">
+                A personal website to display projects and skills.
+            </p>
+            <ul class="project-tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            I'm always open to new opportunities and collaborations.
+            Feel free to reach out via email or explore my work on GitHub and LinkedIn.
+        </p>
+
+        <div class="contact-icons">
+            <a href="mailto:douhaassafiri@gmail.com" class="contact-icon-button" aria-label="Email">
+                <img src="assets/icons/email.svg" alt="Email icon" class="contact-icon inverted"/>
+            </a>
+            <a href="https://github.com/douhaassafiri" target="_blank" class="contact-icon-button" aria-label="GitHub">
+                <img src="assets/icons/github-original-wordmark.svg" alt="GitHub icon" class="contact-icon inverted"/>
+            </a>
+            <a href="https://www.linkedin.com/in/douha-assafiri-a680a6198/" target="_blank" class="contact-icon-button"
+               aria-label="LinkedIn">
+                <img src="assets/icons/linkedin-original.svg" alt="LinkedIn icon" class="contact-icon"/>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Douha Assafiri. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
