@@ -126,3 +126,29 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('show');
 });
+
+document.querySelectorAll('.flip-card-back').forEach(cardBack => {
+    cardBack.addEventListener('mouseenter', () => {
+        document.body.classList.add('disable-scroll');
+    });
+    cardBack.addEventListener('mouseleave', () => {
+        document.body.classList.remove('disable-scroll');
+    });
+
+    cardBack.addEventListener('touchstart', () => {
+        document.body.classList.add('disable-scroll');
+    });
+    cardBack.addEventListener('touchend', () => {
+        document.body.classList.remove('disable-scroll');
+    });
+});
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+if (isTouchDevice) {
+    document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
+    });
+}

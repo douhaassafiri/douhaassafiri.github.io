@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douha Assafiri – Portfolio</title>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
 <body>
 <header class="main-header">
@@ -64,90 +65,313 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Taskie</h3>
-                <a href="https://github.com/douhaassafiri/taskie" target="_blank" class="gh-icon-button"
-                   aria-label="View on GitHub">
-                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
-                </a>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Taskie -->
+                <div class="swiper-slide">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/images/taskie.png" class="project-img" alt="Taskie">
+                                <h3>Taskie</h3>
+                                <p class="project-description">A simple app for managing to-do lists.</p>
+                                <ul class="project-tags">
+                                    <li>Python</li>
+                                    <li>PySide6</li>
+                                    <li>QSS</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-scroll">
+                                    <h3>Taskie</h3>
+                                    <p><strong>Taskie</strong> is a soft and simple desktop to-do app built with Python
+                                        and PySide6. I designed it to feel minimal, calming, and enjoyable to use.</p>
+
+                                    <p><strong>Features</strong></p>
+                                    <ul>
+                                        <li>Add tasks with categories and priorities</li>
+                                        <li>Emoji labels for quick task types</li>
+                                        <li>Filter tasks by category or priority</li>
+                                        <li>Local file-based task saving (no setup needed)</li>
+                                        <li>Double-click to delete tasks quickly</li>
+                                        <li>Pastel-themed interface styled with custom QSS</li>
+                                    </ul>
+
+                                    <p><strong>Built With</strong></p>
+                                    <ul>
+                                        <li>Python 3.7+</li>
+                                        <li>PySide6 (Qt for Python)</li>
+                                        <li>Qt Style Sheets (QSS)</li>
+                                    </ul>
+
+                                    <p><strong>Storage</strong><br>
+                                        Tasks are saved to a local <code>tasks.txt</code> file in the app folder. It's
+                                        private and ignored by Git.</p>
+
+                                    <p><strong>Notes</strong><br>
+                                        Everything is built from scratch without any external libraries beyond Qt. The
+                                        UI layout, logic, and styles were all manually created and tweaked to match a
+                                        soft aesthetic.</p>
+
+                                    <a href="https://github.com/douhaassafiri/taskie" target="_blank"
+                                       class="gh-btn">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ChatApp -->
+                <div class="swiper-slide">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/images/chatapp.png" class="project-img" alt="ChatApp">
+                                <h3>ChatApp</h3>
+                                <p class="project-description">A basic messaging app with an offline mini-game.</p>
+                                <ul class="project-tags">
+                                    <li>C#</li>
+                                    <li>WPF</li>
+                                    <li>FastAPI</li>
+                                    <li>SQLite</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-scroll">
+                                    <h3>ChatApp</h3>
+                                    <p><strong>ChatApp</strong> is a messaging app that lets users send and receive
+                                        messages in real time. It includes friend management, offline support, and even
+                                        a built-in unicorn mini-game when the server is unreachable.</p>
+
+                                    <p><strong>Features</strong></p>
+                                    <ul>
+                                        <li>User login and registration</li>
+                                        <li>Real-time messaging between friends</li>
+                                        <li>Message history with timestamps</li>
+                                        <li>Local message deletion with sync on reconnecting</li>
+                                        <li>Offline mode with local queuing</li>
+                                        <li>Unicorn mini-game when offline</li>
+                                        <li>Friend system (add, accept, reject requests)</li>
+                                        <li>Soft, pastel-themed UI with custom WPF windows</li>
+                                    </ul>
+
+                                    <p><strong>Built With</strong></p>
+                                    <ul>
+                                        <li><strong>Frontend:</strong> C#, WPF, .NET Framework, XAML</li>
+                                        <li><strong>Backend:</strong> Python, FastAPI, SQLite</li>
+                                        <li><strong>Communication:</strong> RESTful API with JSON</li>
+                                    </ul>
+
+                                    <p><strong>Storage</strong><br>
+                                        Messages and user data are stored locally with SQLite and synced with the
+                                        server. Offline messages and deletions are queued and pushed once back online.
+                                    </p>
+
+                                    <p><strong>Notes</strong><br>
+                                        All windows and server logic were custom-built—from the login screen to the chat
+                                        interface. Animations, game logic, and syncing were implemented manually without
+                                        using third-party libraries beyond the main frameworks.</p>
+
+                                    <a href="https://github.com/douhaassafiri/ChatApp" target="_blank"
+                                       class="gh-btn">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Space Invaders -->
+                <div class="swiper-slide">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/images/space-invaders.png" class="project-img" alt="Space Invaders">
+                                <h3>Space Invaders</h3>
+                                <p class="project-description">A remake of the classic arcade game.</p>
+                                <ul class="project-tags">
+                                    <li>C#</li>
+                                    <li>SplashKit</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-scroll">
+                                    <h3>Space Invaders</h3>
+                                    <p><strong>Space Invaders</strong> is a modern reimagining of the classic arcade
+                                        game, built using C# and SplashKit. The game features multiple enemy types,
+                                        power-ups, level progression, and a final boss fight—all wrapped in an
+                                        object-oriented structure that reflects good design principles.</p>
+
+                                    <p><strong>Gameplay Features</strong></p>
+                                    <ul>
+                                        <li>Waves of alien enemies with different movement and attack patterns</li>
+                                        <li>Player ship can shoot, move, and collect power-ups</li>
+                                        <li>Power ups grant benefits like extra lives or spread shots</li>
+                                        <li>Enemies like <code>AlienChaser</code> actively pursue the player</li>
+                                        <li>BossAlien appears on later levels and requires strategy to defeat</li>
+                                        <li>Custom collision and state management system for fluid gameplay</li>
+                                    </ul>
+
+                                    <p><strong>Design Structure</strong></p>
+                                    <ul>
+                                        <li><strong>Entity-Based Inheritance:</strong> All game objects (player,
+                                            enemies, projectiles) extend from a shared <code>Entity</code> class
+                                        </li>
+                                        <li><strong>Factory Pattern:</strong> Used to spawn enemies and power-ups based
+                                            on level logic
+                                        </li>
+                                        <li><strong>Observer Pattern:</strong> ScoreManager updates UI when events occur
+                                            (e.g., enemy destroyed)
+                                        </li>
+                                        <li><strong>State Interface:</strong> <code>IGameState</code> interface handles
+                                            transitions like playing, paused, or game over
+                                        </li>
+                                    </ul>
+
+                                    <p><strong>Built With</strong></p>
+                                    <ul>
+                                        <li>C# with SplashKit</li>
+                                        <li>Custom game loop and rendering logic</li>
+                                        <li>No external frameworks—everything written from scratch</li>
+                                    </ul>
+
+                                    <p><strong>UI Screens</strong></p>
+                                    <ul>
+                                        <li>Main menu, gameplay, pause, and victory screens</li>
+                                        <li>In-game display includes score, level, lives, and bullet count</li>
+                                    </ul>
+
+                                    <p><strong>Notes</strong><br>
+                                        The project was a solo build done entirely in C#, with a focus on demonstrating
+                                        OOP concepts like inheritance and polymorphism. The codebase was designed for
+                                        modularity and clarity, using interfaces and patterns where appropriate. All
+                                        graphics and logic were implemented manually.</p>
+
+                                    <a href="https://github.com/douhaassafiri/spaceinvaders" target="_blank"
+                                       class="gh-btn">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- GZDoom AI Showcase -->
+                <div class="swiper-slide">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/images/gzdoom-ai-showcase.png" class="project-img"
+                                     alt="GZDoom AI Showcase">
+                                <h3>GZDoom AI Showcase</h3>
+                                <p class="project-description">A custom GZDoom mod that explores enemy AI behaviour.</p>
+                                <ul class="project-tags">
+                                    <li>ZScript</li>
+                                    <li>NPC AI</li>
+                                    <li>Modding</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-scroll">
+                                    <h3>GZDoom AI Showcase</h3>
+                                    <p><strong>GZDoom AI Showcase</strong> is a custom AI project built in the GZDoom
+                                        engine using ZScript. It demonstrates modular enemy behaviours and state logic
+                                        through five unique agent types, each designed to test a different kind of game
+                                        AI—from ambient wanderers to tactical turrets. Everything was built from scratch
+                                        in ZScript with a custom map for showcasing each agent in action.</p>
+                                    <p><strong>Included Agents</strong></p>
+                                    <ul>
+                                        <li><strong>PatrolZombie</strong>: Patrols predefined points and
+                                            transitions to chase mode if it detects the player.
+                                        </li>
+                                        <li><strong>WandererSoul</strong>: Non-hostile ambience agent that roams
+                                            randomly to make the map feel alive.
+                                        </li>
+                                        <li><strong>AllyHealer</strong>: Follows the player and heals when health is
+                                            low. Activated via player interaction.
+                                        </li>
+                                        <li><strong>TurretArachnotron</strong>: Stationary unit that rotates and
+                                            fires at the player if in line of sight, using cooldown timers.
+                                        </li>
+                                        <li><strong>Ambusher</strong>: Hides until the player comes close, then
+                                            activates to pursue and attack, showing stealth logic.
+                                        </li>
+                                    </ul>
+                                    <p><strong>Built With</strong></p>
+                                    <ul>
+                                        <li>GZDoom Engine</li>
+                                        <li>ZScript for custom AI and state logic</li>
+                                        <li>Ultimate Doom Builder (map editing)</li>
+                                        <li>CLion + CMake for development workflow</li>
+                                    </ul>
+                                    <p><strong>Key Features</strong></p>
+                                    <ul>
+                                        <li>Custom finite state machines (FSMs) for each AI</li>
+                                        <li>Line-of-sight detection using <code>A_LookEx</code> and vector math</li>
+                                        <li>Event-based behaviours like healing triggers and proximity-based ambushes
+                                        </li>
+                                        <li>Dynamic patrol using editor-defined patrol points</li>
+                                        <li>Offline-friendly and lightweight—designed for smooth performance</li>
+                                    </ul>
+                                    <p><strong>Demo Map</strong><br>
+                                        All agents are placed in a custom showcase map called <code>DEMOMAP</code>. Each
+                                        area demonstrates the behaviour of a different AI in action.</p>
+                                    <p><strong>Notes</strong><br>
+                                        Each agent was designed modularly to focus on different AI concepts, from
+                                        state-driven logic to tactical reasoning.</p>
+
+                                    <a href="https://github.com/douhaassafiri/gzdoom" target="_blank"
+                                       class="gh-btn">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Website -->
+                <div class="swiper-slide">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/images/portfolio.png" class="project-img"
+                                     alt="Portfolio Website">
+                                <h3>Portfolio Website</h3>
+                                <p class="project-description">A personal website to display projects and skills.</p>
+                                <ul class="project-tags">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-scroll">
+                                    <h3>Portfolio Website</h3>
+                                    <p><strong>This website</strong> was built from scratch to showcase my projects,
+                                        skills, and experience. It's designed to be clear, responsive, and visually
+                                        engaging while staying lightweight and easy to navigate.</p>
+                                    <p><strong>Features</strong></p>
+                                    <ul>
+                                        <li>Single-page layout with smooth anchor-based navigation</li>
+                                        <li>Interactive flip-card system to display project details</li>
+                                        <li>Responsive design for both desktop and mobile users</li>
+                                        <li>Canvas-based animated background using JavaScript</li>
+                                    </ul>
+                                    <p><strong>Built With</strong></p>
+                                    <ul>
+                                        <li>HTML5 and CSS3</li>
+                                        <li>Vanilla JavaScript</li>
+                                        <li>SwiperJS for the horizontal scrolling project view</li>
+                                        <li>Canvas API for the animated connecting dots background</li>
+                                    </ul>
+                                    <p><strong>Notes</strong><br>
+                                        The entire site was designed and coded manually without any templates or
+                                        frameworks. The canvas animation was inspired by particle network effects to
+                                        give a modern and professional touch without affecting performance.</p>
+
+                                    <a href="https://github.com/douhaassafiri/douhaassafiri.github.io" target="_blank"
+                                       class="gh-btn">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-            <p class="project-description">
-                A simple app for managing to-do lists.
-            </p>
-            <ul class="project-tags">
-                <li>Python</li>
-                <li>PySide6</li>
-                <li>QSS</li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <div class="project-header">
-                <h3>ChatApp</h3>
-                <a href="https://github.com/douhaassafiri/ChatApp" target="_blank" class="gh-icon-button"
-                   aria-label="View on GitHub">
-                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
-                </a>
-            </div>
-            <p class="project-description">
-                A basic messaging app with an offline mini-game.
-            </p>
-            <ul class="project-tags">
-                <li>C#</li>
-                <li>WPF</li>
-                <li>FastAPI</li>
-                <li>SQLite</li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Space Invaders</h3>
-                <a href="https://github.com/douhaassafiri/spaceinvaders" target="_blank" class="gh-icon-button"
-                   aria-label="View on GitHub">
-                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
-                </a>
-            </div>
-            <p class="project-description">
-                A remake of the classic arcade game.
-            </p>
-            <ul class="project-tags">
-                <li>C#</li>
-                <li>SplashKit</li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <div class="project-header">
-                <h3>GZDoom AI Showcase</h3>
-                <a href="https://github.com/douhaassafiri/gzdoom" target="_blank" class="gh-icon-button"
-                   aria-label="View on GitHub">
-                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
-                </a>
-            </div>
-            <p class="project-description">
-                A custom GZDoom mod that explores enemy AI behaviour.
-            </p>
-            <ul class="project-tags">
-                <li>ZScript</li>
-                <li>NPC AI</li>
-                <li>Modding</li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <div class="project-header">
-                <h3>My Portfolio</h3>
-                <a href="https://github.com/douhaassafiri/douhaassafiri.github.io" target="_blank" class="gh-icon-button"
-                   aria-label="View on GitHub">
-                    <img src="assets/icons/github-original.svg" class="inverted" alt="GitHub"/>
-                </a>
-            </div>
-            <p class="project-description">
-                A personal website to display projects and skills.
-            </p>
-            <ul class="project-tags">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
         </div>
     </section>
 
@@ -178,5 +402,24 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1.25,
+        spaceBetween: 30,
+        grabCursor: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 1.5,
+            },
+            1024: {
+                slidesPerView: 2.5,
+            },
+            1400: {
+                slidesPerView: 3.5,
+            }
+        }
+    });
+</script>
 </body>
 </html>
