@@ -1,0 +1,32 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# VS Code settings
+.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Build / dist output (if you ever add a build step)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp
